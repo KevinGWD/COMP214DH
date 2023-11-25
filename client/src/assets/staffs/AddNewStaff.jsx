@@ -7,29 +7,27 @@ import './addnewstaff.css'
 export default function AddNewStaff() {
 
        const [inform, setInform]=useState({staffNo:'',firstname:'', lastname:'',position:'',sex:'',DOB:'', salary:0, branchNo:'', telephone:'',mobile:'',email:''})
-       let submitted;
+  
        const {staffNo, firstname, lastname,position,sex,DOB, salary,branchNo, telephone,mobile,email}=inform;
     
        const handleSubmit=()=>{
 
         Axios.post('http://localhost:8081/api/dhstaff/newstaff',inform)
-       .then(submitted==true).catch(err=>{
+       .then().catch(err=>{
          console.log('failed');
        }) 
       
-         alert(JSON.stringify(inform)+'     has been sent')
-         submitted=true
+         alert("New Staff Added")
        }
        
       React.useEffect(()=>{
-        submitted=false;
       },[staffNo, firstname, lastname,position,sex,DOB, salary,branchNo, telephone,mobile,email]
         )
 
 
 
   return (
-    <div>
+    <div className='addNewStaff'>
       <h2>Hiring a new staff</h2><br />
       
       <form action=''>
@@ -75,7 +73,6 @@ export default function AddNewStaff() {
         
         <button type="button" onClick={handleSubmit}>Submit</button>
       </form>
-      {inform.submitted==true? <div style={{color:'green', fontFamily:'bold'}}>INFORMATION HAS BEEN SAVED</div>:<div style={{color:'red'}}>Hit 'Submit' to create new staff</div>}
         <br />
         <NavLink to='/loggedin/mystaffs'><span>Back to employees list</span></NavLink>
 

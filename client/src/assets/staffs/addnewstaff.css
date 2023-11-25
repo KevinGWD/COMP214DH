@@ -1,3 +1,9 @@
+.addNewStaff{
+    margin: auto;
+    text-align: center;
+
+}
+
 .hire-form-input{
     width: 100%;
     color: blue;
@@ -6,12 +12,18 @@
 form{
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
 }
 input{
     width: 100%;
     margin-bottom: 10px;
+    padding: 5px;
 }
 button{
     margin-top: 20px;
+}
+label{
+    text-align: left;
 }

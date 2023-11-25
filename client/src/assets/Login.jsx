@@ -10,8 +10,8 @@ export default function Login() {
         <input type="text" id='username'/>
         <label htmlFor="password">Password</label>
         <input type="text" id='password'/>
-        <p>forgot password?</p>
-        <NavLink to='/loggedin'><button>Login</button></NavLink>
+        <div>forgot password?</div><br />
+        <div><NavLink to='/loggedin'><button className='log-in-button'>Login</button></NavLink></div>
       </form>
       </div>
   )

@@ -18,8 +18,7 @@ export default function SingleStaffPage() {
              console.log('failed');
            }) 
           
-             alert(JSON.stringify(inform)+'     has been sent')
-             submitted=true
+             alert(`${fname} ${lname}'s information has been updated`)
            }
 
           

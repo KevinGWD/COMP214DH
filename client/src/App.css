@@ -30,7 +30,7 @@
 .header{
   display: flex;
   width:100%;
-  height:2em;
+  height:4em;
   background-color: rgb(215, 215, 103);
 }
 
@@ -43,7 +43,7 @@
   place-items: center;
   width: min-content;
   margin: auto;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 /* #root{
@@ -74,21 +74,42 @@
 }
 
 .active{
-  background-color: goldenrod !important;
+
   color: rgb(229, 26, 26) ;
   font-weight: 500;
 }
  
 .header>*{
   padding: 10px;
+  margin-top: 10px;
 }
 span button{
-  margin-left: 10px;
-  margin-top: 0;
-  margin-left: 10px;
+  margin-left: 50px;
+  margin-top: 0px;
+
+
 }
 .header>span{
   align-self:flex-end;
 }
+.header{
+  padding-top: 10px;
+}
+
+.log-in-button{
+  width: 100px;
+  padding: 5px;
+  margin-left: 50px;
+}
+input{
+  padding: 10px;
+}
+
+.navbar{
+  background-color: rgb(134, 127, 155);
+  color: azure;
+}
+
+
 
 
