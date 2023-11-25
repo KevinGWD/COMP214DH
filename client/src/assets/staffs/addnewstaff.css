@@ -1,0 +1,17 @@
+.hire-form-input{
+    width: 100%;
+    color: blue;
+
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+button{
+    margin-top: 20px;
+}
