@@ -13,7 +13,7 @@ export default function SingleStaffPage() {
 
         const handleSubmit=()=>{
           setInform({...inform, submitted:true})
-            Axios.put(`http://localhost:8081/api/dhstaff/update`,inform)
+            Axios.put('api/dhstaff/update',inform)
            .then(inform.submitted==true).catch(err=>{
              console.log('failed');
            }) 

@@ -12,7 +12,7 @@ export default function AddNewStaff() {
     
        const handleSubmit=()=>{
 
-        Axios.post('http://localhost:8081/api/dhstaff/newstaff',inform)
+        Axios.post('/api/dhstaff/newstaff',inform)
        .then().catch(err=>{
          console.log('failed');
        }) 
@@ -55,12 +55,13 @@ export default function AddNewStaff() {
 
         <label htmlFor="branchNo" className="hire-form-input">Branch No</label>
         <select id='branchNo' value={inform.branchNo} onChange={(e)=>{setInform({...inform, branchNo:e.target.value})}}>
+          <option value="B002">Choose one</option>
           <option value="B002">B002</option>
           <option value="B003">B003</option>
           <option value="B004">B004</option>
           <option value="B005">B005</option>
           <option value="B007">B007</option>
-          </select>
+          </select><br />
         
         <label htmlFor="telephone" className="hire-form-input">Telephone</label>
         <input type="text" id='telephone' value={inform.telephone} onChange={(e)=>{setInform({...inform, telephone:e.target.value})}}/>

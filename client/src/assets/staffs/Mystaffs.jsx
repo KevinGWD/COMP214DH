@@ -24,7 +24,7 @@ export default function Mystaffs() {
       return obj.STAFFNO!=staffno
     })
     setStaffs(arr)
-    await axios.delete(`http://localhost:8081/api/dhstaff/delete`,{ params: { id: staffno }})
+    await axios.delete(`/api/dhstaff/delete`,{ params: { id: staffno }})
    .then(()=>{
    }
     ).catch(err=>{
