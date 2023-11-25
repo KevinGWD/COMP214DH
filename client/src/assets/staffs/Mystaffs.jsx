@@ -62,7 +62,7 @@ export default function Mystaffs() {
             <td>{staff.LNAME}</td>
             <td>{staff.POSITION}</td>
             <td>{staff.SEX}</td>
-            <td>{staff.DOB}</td>
+            <td>{staff.DOB.substring(0,10)}</td>
             <td>{staff.SALARY}</td>
             <td>{staff.BRANCHNO}</td>
             <td>{staff.TELEPHONE}</td>
