@@ -56,7 +56,13 @@ export default function AddNewStaff() {
         <input type="number" id='salary' value={inform.salary} onChange={(e)=>{setInform({...inform, salary:e.target.value})}}/>
 
         <label htmlFor="branchNo" className="hire-form-input">Branch No</label>
-        <input type="text" id='branchNo' value={inform.branchNo} onChange={(e)=>{setInform({...inform, branchNo:e.target.value})}}/>
+        <select id='branchNo' value={inform.branchNo} onChange={(e)=>{setInform({...inform, branchNo:e.target.value})}}>
+          <option value="B002">B002</option>
+          <option value="B003">B003</option>
+          <option value="B004">B004</option>
+          <option value="B005">B005</option>
+          <option value="B007">B007</option>
+          </select>
         
         <label htmlFor="telephone" className="hire-form-input">Telephone</label>
         <input type="text" id='telephone' value={inform.telephone} onChange={(e)=>{setInform({...inform, telephone:e.target.value})}}/>

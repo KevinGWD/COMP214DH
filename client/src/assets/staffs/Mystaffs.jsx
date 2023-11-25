@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import axios from 'axios';
-
 import './Mystaffs.css'
 
 export default function Mystaffs() {
 
   const [staffs, setStaffs]=useState([])
-  const [count, setCount]=useState(0)
 
   React.useEffect(()=>{
     axios('http://localhost:8081/api/dhstaff/').then(response=>{
