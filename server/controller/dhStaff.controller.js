@@ -3,10 +3,11 @@ import config from '../../config/config.js'
 import bodyParser from 'body-parser';
 
 oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
+const {sqlTableName}=config;
 
 const Insert= async (req, res)=>{
     console.log('inserting')
-    console.log(req.body.salary)
+    console.log(req.body.DOB)
 
     try{const connection = await oracledb.getConnection ({
         user          : config.oracleDBUser,
@@ -15,8 +16,8 @@ const Insert= async (req, res)=>{
     });
 
 
-    await connection.execute(
-        ` BEGIN P_INSERT_NEW_STAFF('${req.body.staffNo}' , '${req.body.firstname}' , '${req.body.lastname}' , '${req.body.position}' , '${req.body.sex}' , '${req.body.DOB}' , ${req.body.salary} , '${req.body.branchNo}' , '${req.body.telephone}' , '${req.body.mobile}' , '${req.body.email}'); END;`
+    await connection.execute(//if change to another table, the stored procedure is needed to edit
+        ` BEGIN P_INSERT_NEW_STAFF('${req.body.staffNo}' , '${req.body.firstname}' , '${req.body.lastname}' , '${req.body.position}' , '${req.body.sex}' , TO_DATE ('${req.body.DOB}','YYYY-MM-DD'), ${req.body.salary} , '${req.body.branchNo}' , '${req.body.telephone}' , '${req.body.mobile}' , '${req.body.email}'); END;`
     );
 
     await connection.close();}
@@ -34,7 +35,7 @@ const Read= async (req, res)=>{
       console.log('connectedtosql')
     
       const results= await connection.execute(
-          'select * from TEST order by timestamp_column DESC'
+          `select * from ${sqlTableName} order by timestamp_column DESC`
       );
      // await connection.close();
       res.send(results.rows) }
@@ -55,7 +56,7 @@ const Read= async (req, res)=>{
         connectString : config.oracleDBhost
     });
     await connection.execute(
-        `BEGIN UPDATE TEST SET email='${req.body.email}' ,telephone='${req.body.phone}' , salary=${req.body.salary} WHERE STAFFNO= '${req.body.staffno}'; commit; END;` 
+        `BEGIN UPDATE ${sqlTableName} SET email='${req.body.email}' ,telephone='${req.body.phone}' , salary=${req.body.salary} WHERE STAFFNO= '${req.body.staffno}'; commit; END;` 
         )
     console.log('updated')
     await connection.close();}
@@ -75,7 +76,7 @@ const Read= async (req, res)=>{
         connectString : config.oracleDBhost
     });
     await connection.execute(
-        `BEGIN DELETE FROM TEST WHERE STAFFNO= '${req.query.id}'; commit; END;` 
+        `BEGIN DELETE FROM ${sqlTableName} WHERE STAFFNO= '${req.query.id}'; commit; END;` 
         )
     console.log('deleted')
     await connection.close();}

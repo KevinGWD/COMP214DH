@@ -11,7 +11,8 @@ process.env.MONGO_HOST ||
  '/mernproject',
 oracleDBUser: 'COMP214_f23_ers_12',
 oracleDBPwd:'comp214',
-oracleDBhost:'199.212.26.208/SQLD'
+oracleDBhost:'199.212.26.208/SQLD',
+sqlTableName:'DH_STAFF'
 
 
 
