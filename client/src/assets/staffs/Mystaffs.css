@@ -13,9 +13,15 @@ td{
     margin-left: 20px;
     height: 1.5em;
     border-bottom: 1px solid black;
-    text-align: left;
-    
+    text-align:left;
+    text-justify:auto;
+    gap: 0;
 }
 th{
     text-align: left;
-} 
+}
+
+.inlineButton{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

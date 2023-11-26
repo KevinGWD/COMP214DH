@@ -68,8 +68,8 @@ export default function Mystaffs() {
             <td>{staff.TELEPHONE}</td>
             <td>{staff.MOBILE}</td>
             <td>{staff.EMAIL}</td>
-            <td><NavLink to={{pathname:`/loggedin/item/${staff.STAFFNO}/${staff.FNAME}/${staff.LNAME}/${staff.EMAIL}/${staff.TELEPHONE}/${staff.SALARY}`}}><button>UPDATE</button></NavLink></td>
-            <td><button onClick={()=>handleDelete(staff.STAFFNO)}>DELETE</button></td> 
+            <td><NavLink to={{pathname:`/loggedin/item/${staff.STAFFNO}/${staff.FNAME}/${staff.LNAME}/${staff.EMAIL}/${staff.TELEPHONE}/${staff.SALARY}`}}><button className='inlineButton'>UPDATE</button></NavLink></td>
+            <td><button className='inlineButton' onClick={()=>handleDelete(staff.STAFFNO)}>DELETE</button></td> 
             </tr>
       ))}
     </tbody>
