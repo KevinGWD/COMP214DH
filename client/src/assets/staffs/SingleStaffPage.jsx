@@ -12,10 +12,12 @@ export default function SingleStaffPage() {
        let errormessage='';
 
         const handleSubmit=()=>{
+          console.log("updating")
           setInform({...inform, submitted:true})
-            Axios.put('api/dhstaff/update',inform)
+            Axios.put('/api/dhstaff/update',inform)
            .then(inform.submitted==true).catch(err=>{
              console.log('failed');
+             console.log("updated")
            }) 
           
              alert(`${fname} ${lname}'s information has been updated`)
