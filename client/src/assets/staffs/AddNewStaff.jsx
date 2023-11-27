@@ -5,6 +5,7 @@ import Axios from 'axios'
 import './addnewstaff.css'
 
 export default function AddNewStaff() {
+       let errorMessage=''
 
        const [inform, setInform]=useState({staffNo:'',firstname:'', lastname:'',position:'',sex:'',DOB:'', salary:0, branchNo:'', telephone:'',mobile:'',email:''})
   
@@ -13,11 +14,10 @@ export default function AddNewStaff() {
        const handleSubmit=()=>{
 
         Axios.post('/api/dhstaff/newstaff',inform)
-       .then().catch(err=>{
+       .then((data)=> {alert("New Staff Added")}).catch(error=>{
          console.log('failed');
-       }) 
-      
-         alert("New Staff Added")
+         errorMessage=error.message
+       })
        }
        
       React.useEffect(()=>{
@@ -74,6 +74,7 @@ export default function AddNewStaff() {
         
         <button type="button" onClick={handleSubmit}>Submit</button>
       </form>
+         <p>{errorMessage}</p>
         <br />
         <NavLink to='/loggedin/mystaffs'><span>Back to employees list</span></NavLink>
 

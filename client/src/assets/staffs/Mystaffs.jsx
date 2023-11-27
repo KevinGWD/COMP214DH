@@ -15,7 +15,7 @@ export default function Mystaffs() {
         console.log(fetchedData)
       }
    }).catch(err=>{
-
+    setStaffs([])
    })  
   },[])
 
@@ -38,6 +38,7 @@ export default function Mystaffs() {
       <span><NavLink to='/loggedin/hirenewstaff' ><button>Hire New Staff</button></NavLink></span>
     </div>
     <br /><br /> 
+    {staffs.length===0?<h2>&nbsp;&nbsp;&nbsp;&nbsp;Can not connect to database at the moment, please try again later... ...</h2>:
     <table>
     <thead>
       <tr>
@@ -73,7 +74,7 @@ export default function Mystaffs() {
             </tr>
       ))}
     </tbody>
-    </table>
+    </table>}
     </>
   )
 }
