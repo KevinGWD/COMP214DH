@@ -19,3 +19,7 @@ p{
     text-decoration: underline;
     font-size: larger;
 }
+.reminder{
+    margin: auto;
+    text-align: center;
+}
