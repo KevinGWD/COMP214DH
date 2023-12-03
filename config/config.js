@@ -12,9 +12,6 @@ process.env.MONGO_HOST ||
 oracleDBUser: 'COMP214_f23_ers_12',
 oracleDBPwd:'comp214',
 oracleDBhost:'199.212.26.208/SQLD',
-clientDBUser: 'COMP214_f23_ers_16',
-clientDBPwd: 'password',
-
 clientDB: 'dh_client',
 sqlTableName:'DH_STAFF'
 

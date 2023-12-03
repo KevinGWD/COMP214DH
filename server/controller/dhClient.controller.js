@@ -10,11 +10,11 @@ const Insert= async (req, res)=>{
     console.log(req.body.clientno)
 
     try{const connection = await oracledb.getConnection ({
-        user          : config.clientDBUser,
-        password      : config.clientDBPwd,
+        user          : config.oracleDBUser,
+        password      : config.oracleDBPwd,
         connectString : config.oracleDBhost
     });
-
+    
 
     await connection.execute(//if change to another table, the stored procedure is needed to edit
         ` BEGIN P_INSERT_NEW_CLIENT('${req.body.clientno}' , '${req.body.fname}' , '${req.body.lname}' , '${req.body.telno}' , 
@@ -31,8 +31,8 @@ const Read= async (req, res)=>{
     console.log('grabbing from client')
 
     try{const connection = await oracledb.getConnection ({
-        user          : config.clientDBUser,
-        password      : config.clientDBPwd,
+        user          : config.oracleDBUser,
+        password      : config.oracleDBPwd,
         connectString : config.oracleDBhost
       });
 
@@ -53,8 +53,8 @@ const Read= async (req, res)=>{
     console.log("client number: " + req.body.clientno)
     console.log("client number: " + req.body)
     try{const connection = await oracledb.getConnection ({
-        user          : config.clientDBUser,
-        password      : config.clientDBPwd,
+        user          : config.oracleDBUser,
+        password      : config.oracleDBPwd,
         connectString : config.oracleDBhost
     });
     await connection.execute(
@@ -76,8 +76,8 @@ const Read= async (req, res)=>{
     console.log(req.query.id)
 
     try{const connection = await oracledb.getConnection ({
-        user          : config.clientDBUser,
-        password      : config.clientDBPwd,
+        user          : config.oracleDBUser,
+        password      : config.oracleDBPwd,
         connectString : config.oracleDBhost
     });
     await connection.execute(
