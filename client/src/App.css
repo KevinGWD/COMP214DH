@@ -1,0 +1,115 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+/* 
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+.header{
+  display: flex;
+  width:100%;
+  height:4em;
+  background-color: rgb(215, 215, 103);
+}
+
+#outlet {
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  display:flex;
+  place-items: center;
+  width: min-content;
+  margin: auto;
+  /* background-color: aquamarine; */
+}
+
+/* #root{
+  background-color: aquamarine;
+  width: min-content;
+  margin: auto;
+} */
+.input{
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 400px;
+  margin-bottom: 50px;
+}
+
+.title{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.cancel{
+  float: right;
+  background-color: crimson;
+  color:aliceblue
+}
+.error{
+  color:red;
+  font:italic;
+}
+
+.active{
+
+  color: rgb(229, 26, 26) ;
+  font-weight: 500;
+}
+ 
+.header>*{
+  padding: 10px;
+  margin-top: 10px;
+}
+span button{
+  margin-left: 50px;
+  margin-top: 0px;
+
+
+}
+.header>span{
+  align-self:flex-end;
+}
+.header{
+  padding-top: 10px;
+}
+
+.log-in-button{
+  width: 100px;
+  padding: 5px;
+  margin-left: 50px;
+}
+input{
+  padding: 10px;
+}
+
+.navbar{
+  background-color: rgb(134, 127, 155);
+  color: azure;
+}
+
+
+
+

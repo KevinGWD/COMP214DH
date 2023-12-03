@@ -1,0 +1,21 @@
+#body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.navbar{
+    flex:1;
+    text-decoration: none;
+    color: azure;
+    background-color: rgb(34, 53, 90);
+}
+.content{
+    flex:10;
+    background-color:azure
+}
+p{
+    color: azure;
+    margin-top: 50px;
+    text-decoration: underline;
+    font-size: larger;
+}
