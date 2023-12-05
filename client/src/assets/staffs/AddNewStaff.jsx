@@ -1,10 +1,11 @@
 import React, { useState , useEffect} from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Axios from 'axios'
 
 import './addnewstaff.css'
 
 export default function AddNewStaff() {
+       const navigate=useNavigate()
        let errorMessage=''
 
        const [inform, setInform]=useState({staffNo:'',firstname:'', lastname:'',position:'',sex:'',DOB:'', salary:0, branchNo:'', telephone:'',mobile:'',email:''})
@@ -14,10 +15,15 @@ export default function AddNewStaff() {
        const handleSubmit=()=>{
 
         Axios.post('/api/dhstaff/newstaff',inform)
-       .then((data)=> {alert("New Staff Added")}).catch(error=>{
+       .then(
+        (data)=> {alert("New Staff Added")}).catch(error=>{
          console.log('failed');
          errorMessage=error.message
+         return
        })
+       setTimeout(() => {
+        navigate("/loggedin")
+      }, 1000)
        }
        
       React.useEffect(()=>{
