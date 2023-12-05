@@ -1,36 +1,8 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
-/* 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-.header{
+.menu-header{
   display: flex;
   width:100%;
-  height:4em;
+  height:5em;
   background-color: rgb(215, 215, 103);
 }
 
@@ -43,14 +15,8 @@
   place-items: center;
   width: min-content;
   margin: auto;
-  /* background-color: aquamarine; */
 }
 
-/* #root{
-  background-color: aquamarine;
-  width: min-content;
-  margin: auto;
-} */
 .input{
   background: none;
   border: none;
@@ -79,21 +45,27 @@
   font-weight: 500;
 }
  
-.header>*{
+.menu-header>*{
   padding: 10px;
   margin-top: 10px;
+
 }
-span button{
+.menu-button{
   margin-left: 50px;
-  margin-top: 0px;
-
-
+  margin-top: 5px;
+  width: 70px;
+  height: 30px;
+  font-size: medium;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px 0px rgb(38, 176, 222);
 }
 .header>span{
   align-self:flex-end;
 }
 .header{
   padding-top: 10px;
+
 }
 
 .log-in-button{
@@ -108,7 +80,18 @@ input{
 .navbar{
   background-color: rgb(134, 127, 155);
   color: azure;
+
 }
+.menu-title{
+  margin-left: 15%;
+}
+.menu-title h1{
+  margin-top: -7px;
+  font-style: oblique;
+  font-size:2.5em;
+  color: blue;
+}
+
 
 
 

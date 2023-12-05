@@ -35,8 +35,9 @@ export default function Mystaffs() {
 
   return (
     <>
-      <div><h1>Staff List </h1>
-        <span><NavLink to='/loggedin/hirenewstaff' ><button>Hire New Staff</button></NavLink> <form action=""><button>Search</button><input type="text" />
+      <div className='staffs-page'><h1 className='display-title'>Staff List </h1>
+        <NavLink to='/loggedin/hirenewstaff' ><button className='hire-new-button'>Hire New Staff</button></NavLink> 
+        {/* <form action=""><button>Search</button><input type="text" />
         <h1>by</h1>
         <select name="indext" id="">
           <option value="staffNo">Staff No</option>
@@ -45,8 +46,7 @@ export default function Mystaffs() {
           <option value="position">Position</option>
           <option value="mobile">Mobile</option>
           <option value="email">Email</option>
-          </select></form></span>
-       
+          </select></form></span> */}
       </div>
       <br /><br />
       {staffs.length === 0 ? <h2>&nbsp;&nbsp;&nbsp;&nbsp;Loading ... ...</h2> :

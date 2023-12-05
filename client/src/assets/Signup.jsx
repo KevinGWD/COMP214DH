@@ -18,27 +18,20 @@ export default function Signup() {
     
   return (
     <div>
-        <div className="title"><h2>New Product</h2></div>
+        <div className="title"><h2>New Staff Signup</h2></div>
         <form onSubmit={(handleSubmit(onSubmit))}>
 
         <label htmlFor="name">Name{errors.name&&(<span className='error'>(Required)</span>)}</label>
         <input className="input" id='name' type="text" {...register('name',{required:true})}/>
 
-        <label htmlFor="description">Description {errors.description&&(<span className='error'>(Required)</span>)}</label>
+        <label htmlFor="description">Staff ID {errors.description&&(<span className='error'>(Required)</span>)}</label>
         <input className="input" id='description' type="text" {...register('description',{required:true})}/>
 
-        <label htmlFor="category">Category</label>
-        <select className="input" id='category' {...register('category',{required:true})}>
-                <option value='men'>Men</option>
-                <option value='women'>Women</option>
-                <option value='teen'>Teen</option>
-            </select>
-
-        <label htmlFor="quantity">Quantity {errors.quantity&&(<span className='error'>(Required and must be a number)</span>)}</label>
+        <label htmlFor="quantity">Password {errors.quantity&&(<span className='error'>(Required and must be a number)</span>)}</label>
         <input className="input" id='quantity' type="number" {...register('quantity',{required:true})}/>
 
 
-        <label htmlFor="price">Price {errors.price&&(<span className='error'>(Required and must be a number)</span>)}</label>
+        <label htmlFor="price">Confirm Password {errors.price&&(<span className='error'>(Required and must be a number)</span>)}</label>
         <input className="input" id='price' type="decimal" {...register('price',{required:true, pattern: /^-?\d*\.?\d+$/ })}/>
 
         <button className="submit">SUBMIIT</button>
