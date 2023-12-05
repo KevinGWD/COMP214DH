@@ -5,6 +5,7 @@
 }
 .navbar{
     padding-top: 30px;
+    padding-left: 20px;
     flex:1;
     text-decoration: none;
     color: azure;
