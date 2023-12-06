@@ -42,7 +42,7 @@ export default function SingleStaffPage() {
       <h2>Updating {fname} {lname}'s information:</h2><br />
 
       <form action="">{/* need submit data */}
-        <input type="text" value={inform.staffno} style={{ display: 'none' }} />
+        <input type="text" value={inform.staffno} style={{ display: 'none' }} onChange={(e) => { setInform({ ...inform, email: e.target.value }) }}/>
         <label htmlFor="email" className="update-form-input">Email</label>
         <input type="text" value={inform.email} onChange={(e) => { setInform({ ...inform, email: e.target.value }) }} /><br />
         <label htmlFor="phone" className="update-form-input">Phone</label>

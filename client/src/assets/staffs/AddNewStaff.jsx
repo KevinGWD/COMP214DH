@@ -15,8 +15,7 @@ export default function AddNewStaff() {
        const handleSubmit=()=>{
 
         Axios.post('/api/dhstaff/newstaff',inform)
-       .then(
-        (data)=> {alert("New Staff Added")}).catch(error=>{
+       .then((data)=> {alert("New Staff Added")}).catch(error=>{
          console.log('failed');
          errorMessage=error.message
          return

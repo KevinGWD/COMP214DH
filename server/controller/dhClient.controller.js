@@ -17,8 +17,10 @@ const Insert= async (req, res)=>{
     
 
     await connection.execute(//if change to another table, the stored procedure is needed to edit
-        ` BEGIN P_INSERT_NEW_CLIENT('${req.body.clientno}' , '${req.body.fname}' , '${req.body.lname}' , '${req.body.telno}' , 
-        '${req.body.street}' , '${req.body.city}', ${req.body.email} , '${req.body.preftype}' , '${req.body.maxrent}'); END;`
+        ` BEGIN P_INSERT_NEW_CLIENT('${req.body.clientno}' , 
+        '${req.body.fname}' , '${req.body.lname}' , '${req.body.telno}' , 
+        '${req.body.street}' , '${req.body.city}', ${req.body.email} , 
+        '${req.body.preftype}' , '${req.body.maxrent}'); END;`
     );
 
     await connection.close();}
@@ -89,28 +91,5 @@ const Read= async (req, res)=>{
         console.log(error)
     }
   }
-
-//   const FindItem = async (req, res, next, id) => {
-//     if (isValidObjectId(id)) {
-//         try {
-//             const product = await ProductModel.findById(id);
-//             if (product) {
-//                 req.profile = product;
-//                 next()
-//             }
-//             else {
-//                 res.send('Item not found !')
-//             }
-//         }
-//         catch {
-//             (err) => {
-//                 res.status(400).json({
-//                     error: `${err.message}`
-//                 })
-//             }
-//         }
-//     } else {
-//         res.send('Invalid MongoDB ID!')
-//     }
 
   export {Read, Insert, Update , Delete}

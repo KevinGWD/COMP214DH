@@ -13,8 +13,6 @@ function App() {
   return (
     <>
       <div className="menu-header">
-        <div>logo</div>
-        <div>about</div>
         <div >
           <span>
             <NavLink to="/login"><button className='menu-button'>Login</button></NavLink>
