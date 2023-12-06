@@ -23,7 +23,6 @@ export default function SingleStaffPage() {
         console.log("updated")
       })
 
-    //  alert(`${fname} ${lname}'s information has been updated`)
     setTimeout(() => {
       navigate("/loggedin")
     }, 1000)
@@ -41,7 +40,7 @@ export default function SingleStaffPage() {
     <div>
       <h2>Updating {fname} {lname}'s information:</h2><br />
 
-      <form action="">{/* need submit data */}
+      <form action="">
         <input type="text" value={inform.staffno} style={{ display: 'none' }} onChange={(e) => { setInform({ ...inform, email: e.target.value }) }}/>
         <label htmlFor="email" className="update-form-input">Email</label>
         <input type="text" value={inform.email} onChange={(e) => { setInform({ ...inform, email: e.target.value }) }} /><br />
