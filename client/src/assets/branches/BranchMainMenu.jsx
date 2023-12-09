@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-function myLinks(){
+function BranchMainMenu(){
     return(
         <div>
             <Link to="/branchMainMenu/Search">Branch Search</Link>
@@ -13,4 +13,4 @@ function myLinks(){
     )
 }
 
-export default myLinks
+export default BranchMainMenu
