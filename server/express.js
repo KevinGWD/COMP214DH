@@ -13,8 +13,8 @@ app.use(helmet())
 app.use(cors())
 export default app
 */
-const oracledb = require('oracledb');
-const branches = require('./routers/branches.js');
+import oracledb from 'oracledb'
+import branches from './routers/branches.js'
 import express from 'express'
 import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
