@@ -10,7 +10,7 @@ export default function BranchMainMenu() {
       <Routes>
         <Route path = "/Branch" element={<><MainMenu/></>}/>
         <Route path = "/Branch/Search" element={<><BranchSearch/></>}/>
-        <Route path = "/Branch/List" element={<><BranchList/></>}/>
+        <Route path = "/Branch/Update" element={<><BranchList/></>}/>
         <Route path = "/Branch/Open" element={<><BranchOpen/></>}/>
       </Routes>
     </Router>
