@@ -10,7 +10,7 @@ import SingleClientPage from './clients/SingleClientPage'
 import AddNewclient from './clients/AddNewClient'
 import SingleBranchPage from './branches/SingleBranchPage'
 import AddNewBranch from './branches/AddNewBranch'
-
+import BranchSearch from './branches/BranchSearch.jsx'
 
 
 export default function Loggedin() {
@@ -32,6 +32,7 @@ export default function Loggedin() {
           <Route path='client/:clientno/:fname/:lname/:telno/:street/:city/:email/:preftype/:maxrent' element={<SingleClientPage />} />
           <Route exact path='branch' element={<SingleBranchPage/>} />
           <Route path='branch/:branchno/:street/:city/:postcode' element={<SingleBranchPage />} />
+          <Route path='branch/search' element={<BranchSearch/>}><Route/>
         </Routes>
     </div>
     </main>
