@@ -1,0 +1,51 @@
+
+.BranchResult {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+.BranchResult h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+
+.BranchResult label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+
+.BranchResult input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+
+.UpdateButton {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 30PX;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+
+.UpdateButton:hover {
+    background-color: #0056b3;
+  }
+  
