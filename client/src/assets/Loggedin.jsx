@@ -6,6 +6,7 @@ import ClientMainMenu from './clients/ClientMainMenu'
 import BranchMainMenu from './branches/BranchMainMenu'
 import Mystaffs from './staffs/Mystaffs'
 import SingleStaffPage from './staffs/SingleStaffPage'
+import BranchRoutes from './branches/BranchRoutes.jsx'
 
 export default function Loggedin() {
   return (
@@ -20,6 +21,7 @@ export default function Loggedin() {
         <Routes>
           <Route index element={<Mystaffs/>}/>
           <Route path='branchMainMenu' element={<BranchMainMenu/>}/>
+          <BranchRoutes/>
           <Route path='clientMainMenu' element={<ClientMainMenu/>}/>
           <Route path='hirenewstaff' element={<AddNewStaff />}/>
           <Route path='mystaffs' element={<Mystaffs/>}/>
