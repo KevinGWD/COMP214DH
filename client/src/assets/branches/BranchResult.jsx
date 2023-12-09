@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './BranchResult.css'
 
 function BranchResult() {
 
@@ -44,26 +45,26 @@ function BranchResult() {
   }
 
   return (
-    <div>
+    <div className="BranchResultContainer">
       {allBranches.map((element, index) => (
         <div className="BranchResult" key={index}>
           <h1>Branch #: {element[0]}</h1>
           <form key={index}>
 
-            <label htmlFor={`STREET_${index}`}>Street Address:</label>
+            <label htmlFor={`STREET_${index}`} className="InputLabel">Street Address:</label>
             <input type="text" id='2' defaultValue={element[1]} onChange = {(e) => {handleOnChange(e, index)}}/>
 
-            <label htmlFor={`CITY_${index}`}>City:</label>
+            <label htmlFor={`CITY_${index}`} className="InputLabel">City:</label>
             <input type="text" id='3' defaultValue={element[2]} onChange = {(e) => {handleOnChange(e, index)}}/>
 
-            <label htmlFor={`POSTCODE_${index}`}>Postal Code:</label>
+            <label htmlFor={`POSTCODE_${index}`} className="InputLabel">Postal Code:</label>
             <input type="text" id='4' defaultValue={element[3]} onChange = {(e) => {handleOnChange(e, index)}}/>
             <br />
             <br />
           </form>
         </div>
       ))}
-      <button onClick={()=>{handleSubmit()}}>Update</button>
+      <button onClick={()=>{handleSubmit()}} className="UpdateButton">Update</button>
     </div>
   );
 }
