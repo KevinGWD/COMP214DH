@@ -12,7 +12,7 @@ export default function Loggedin() {
     <main id='body'><div className='navbar'> 
     <h3>Dashboard</h3>
     <NavLink to="mystaffs"><p>Staff Main Menu</p></NavLink> 
-    <NavLink to='/Branch'><p>Branch Main Menu</p></NavLink>
+    <NavLink to='branchMainMenu'><p>Branch Main Menu</p></NavLink>
     <NavLink to="clientMainMenu"><p>Client Main Menu</p></NavLink>
     </div>
     <div className='content'>
